@@ -72,10 +72,6 @@ object Trainer extends App {
           dv4 = entry.getValue()
         }
       }
-
-      // parsed all parts of the decision vector, do something
-      // with it here
-
         var counter:Double = 0
         val max:Int = 1000
         var score:Double = 0.0
@@ -89,9 +85,6 @@ object Trainer extends App {
         	}
         }
       score = counter / max
-
-      // and then send back our tuple using a different 'out' queue
-
       val smr = new SendMessageRequest(outUrl,
         "message-" + counter)
 
@@ -116,8 +109,6 @@ object Trainer extends App {
       println("No messages...")
 
     }
-
-    Thread.sleep(1000)
   }
 
 }
